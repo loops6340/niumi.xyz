@@ -40,14 +40,14 @@ async function baseRequest(url: string) {
 
 async function getMostsRecent() {
     const mensajes = await baseRequest(
-      `https://discord.com/api/v10${Routes.channelMessages("1459587832459952200")}`,
+      `https://discord.com/api/v10${Routes.channelMessages(process.env.CHANNEL_ID!)}`,
     );
     return mensajes.data as Message[]
 }
 
 async function getBefore(id: string) {
     const mensajes = await baseRequest(
-      `https://discord.com/api/v10${Routes.channelMessages("1459587832459952200")}?before=${id}`,
+      `https://discord.com/api/v10${Routes.channelMessages(process.env.CHANNEL_ID!)}?before=${id}`,
     )
     return mensajes.data as Message[]
 }
