@@ -1,14 +1,10 @@
 "use server"
-import fs from 'fs'
 import axios from 'axios'
 import FormDataServer from 'form-data'
-import { headers } from 'next/headers';
 import { Readable } from 'stream';
-import { refresh, revalidatePath, updateTag } from 'next/cache';
-
 
 const DISCORD_TOKEN = process.env.TOKEN
-const CHANNEL_ID = '1459587832459952200';
+const CHANNEL_ID = process.env.CHANNEL_ID;
 
 
 const enviarCodigo = async (formData: FormData) => {

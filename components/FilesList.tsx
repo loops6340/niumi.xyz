@@ -1,9 +1,6 @@
 /* eslint-disable react-hooks/refs */
 import extensionImages from "./DocumentFileExtensions";
-import Visibility from "@/public/visibility.svg";
-import RemoveRedEyeIcon from "@mui/material/Icon";
 import { Ref, useState } from "react";
-import Codigo from "./Archivo/Codigo";
 import Archivo from "./Archivo";
 import { AiFillEye } from "react-icons/ai";
 import { Temporal } from "@js-temporal/polyfill";

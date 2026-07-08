@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ñumi.xyz
 
-## Getting Started
+Ola, esta este es el codigo fuente de la página [Ñumi.xyz](https://ñumi,xyz)
 
-First, run the development server:
+## Build
+
+Como esta hecho en Next.js (Por ahora), se puede iniciar como cualquier proyecto de dicho framework
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
+# o
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+```bash
+npm run build
+# o
+pnpm build
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Importante**, para que el proyecto funcione, debes crear un bot de discord el cual debe estar en un server donde tenga algún rol que le permita poder leer los mensajes de los canales del server.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Tambien debes añadir la id de un canal del server que servirá como el "chat" de la página (en realidad leerá los mensajes de dicho canal, y cuando quieras enviar un mensaje, los enviará allí, técnicamente el que hace la mayoría del trabajo es discord)
 
-## Learn More
+.env
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+TOKEN=<discord-bot-token>
+CHANNEL_ID=<discord-channel-id>
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Partes del proyecto
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Objetivo              | Implementado      |
+| --------------------- | ----------------- |
+| Página principal      | ✅ Si             |
+| /Chat (discord)       | ✅ Si (casi todo) |
+| /Archivos             | No                |
+| /Tareas               | No                |
+| /Chat (db)            | No                |
+| Sistema de cuentas... | No                |

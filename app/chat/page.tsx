@@ -1,14 +1,11 @@
 "use client";
-import { RefObject, useEffect, useRef, useState, useTransition } from "react";
+import { useEffect, useRef, useState, useTransition } from "react";
 import CajaDeTexto from "@/components/CajaDeTexto";
 import ListadoDeMensajes from "@/components/ListadoDeMensajes";
 import * as DiscordMessagesService from "@/actions/Messages";
 import FormularoDeEnvioADiscord from "@/components/FormularioDeCodigo";
 import NavBar from "@/components/UI/NavBar";
-import DarkButton from "@/components/UI/DarkButton";
 import FilesList from "@/components/FilesList";
-import { BsChevronDoubleDown } from "react-icons/bs";
-import { BsChevronUp } from "react-icons/bs";
 
 const Home = () => {
   const [messages, setMessages] = useState<Message[]>([]);
